@@ -1,0 +1,245 @@
+.x-multifile-wrap {
+    width: 800px;
+    height: 400px;
+    font-family: "Microsoft Yahei", "寰蒋闆呴粦", Arial, STHeiti, Tahoma, Helvetica;
+}
+
+.x-multifile-wrap .placeholder {
+    height: 100%;
+    border: 3px dashed #e6e6e6;
+}
+
+.x-multifile-wrap .placeholder .wrap {
+    height: 100%;
+    position: relative;
+}
+
+.x-multifile-wrap .placeholder .tips {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    line-height: 2;
+    margin-top: 25px;
+    text-align: center;
+    font-size: 16px;
+    color: #ccc;
+}
+
+.x-multifile-wrap .add {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -90px;
+    margin-top: -25px;
+}
+
+.x-multifile-wrap .status .btns .upload, .x-multifile-wrap .add label {
+    display: inline-block;
+    width: 180px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #00b7ee;
+    border-radius: 3px;
+    font-size: 20px;
+    color: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.x-multifile-wrap .status .btns:hover .upload, .x-multifile-wrap .add:hover label {
+    background: #00a2d4;
+}
+
+.x-multifile-wrap .add input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.x-multifile-wrap .filelist {
+    display: none;
+    height: 346px;
+    padding: 10px;
+    border: 1px solid #dadada;
+    overflow: auto;
+}
+
+.x-multifile-wrap .filelist li {
+    position: relative;
+    float: left;
+    width: 176px;
+    margin: 0 13px 13px 0;
+    border: 1px solid #dadada;
+    overflow: hidden;
+}
+
+.x-multifile-wrap .filelist li .img {
+    height: 176px;
+    text-align: center;
+    overflow: hidden;
+    transform: translateY(0%);
+    transition: transform 0.5s ease-in;
+    -webkit-transition: -webkit-transform .3s ease-out;
+}
+
+.x-multifile-wrap .filelist li img {
+    height: 100%;
+}
+
+.x-multifile-wrap .filelist li .title {
+    height: 23px;
+    line-height: 23px;
+    padding: 0 6px;
+    color: #666;
+    border-top: 1px solid #dadada;
+    font-size: 14px;
+}
+
+.x-multifile-wrap .filelist li .progress {
+    position: absolute;
+    left: 0;
+    bottom: 25px;
+    width: 100%;
+    height: 8px;
+}
+
+.x-multifile-wrap .filelist li .progress span {
+    display: block;
+    width: 0;
+    height: 100%;
+    background: #1483d8;
+}
+
+.x-multifile-wrap .filelist li .tool {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    transform: translateY(100%);
+    -webkit-transform: translateY(-100%);
+    transition: transform 0.5s ease-in;
+    -webkit-transition: -webkit-transform .3s ease-out;
+}
+
+.x-multifile-wrap .filelist li:hover .tool {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+}
+
+.x-multifile-wrap .filelist li .tool a {
+    float: right;
+    width: 24px;
+    height: 24px;
+    margin: 5px 1px 1px;
+    font-family: "iconfont";
+    font-size: 16px;
+    font-style: normal;
+    color: #fff;
+    cursor: pointer;
+}
+
+.x-multifile-wrap .filelist li .tool a:hover {
+    color: #ff0000;
+    text-decoration: none;
+}
+
+.x-multifile-wrap .filelist li .result {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 25px;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-family: "iconfont";
+    font-size: 16px;
+    color: #fff;
+    background: #00a2d4;
+}
+
+.x-multifile-wrap .status {
+    display: none;
+    position: relative;
+    height: 63px;
+    line-height: 63px;
+    padding: 0 20px;
+    border: 1px solid #dadada;
+    border-top: 0;
+}
+
+.x-multifile-wrap .status .progress {
+    display: none;
+    position: relative;
+    width: 198px;
+    height: 18px;
+    line-height: 18px;
+    margin-right: 10px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #1483d8;
+}
+
+.x-multifile-wrap .status .progress .text {
+    position: relative;
+    color: #6dbfff;
+    z-index: 1;
+}
+
+.x-multifile-wrap .status .progress .percentage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #1483d8;
+}
+
+.x-multifile-wrap .status .info {
+    display: inline-block;
+    font-size: 14px;
+    color: #666;
+}
+
+.x-multifile-wrap .status .btns {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    height: 40px;
+    line-height: 40px;
+    margin-top: -20px;
+}
+
+.x-multifile-wrap .status .btns .upload, .x-multifile-wrap .status .btns .add {
+    display: inline-block;
+    position: relative;
+    float: left;
+    left: auto;
+    top: auto;
+    margin: 0;
+}
+
+.x-multifile-wrap .status .btns .upload, .x-multifile-wrap .status .btns .add label {
+    width: auto;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 18px;
+    font-size: 14px;
+}
+
+.x-multifile-wrap .status .btns .upload {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.x-multifile-wrap .status .btns .add label {
+    background-color: #fff;
+    border: 1px solid #cfcfcf;
+    color: #565656;
+}
