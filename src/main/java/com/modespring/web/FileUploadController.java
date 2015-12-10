@@ -20,19 +20,16 @@ public class FileUploadController {
     }
     @RequestMapping(value = "upload", method = RequestMethod.POST)
     @ResponseBody
-    public ModelAndView upload(ModelAndView modelAndView, HttpSession session, @RequestParam MultipartFile file) {
-        System.out.println("aaaaaaaaaaaaaaaaaaaaa");
+    public void upload(HttpSession session, @RequestParam MultipartFile file) {
         try {
             if (file != null) {
-                String realPath = session.getServletContext().getRealPath("/files");
+                String directory = file.hashCode() + "";
+                String realPath = session.getServletContext().getRealPath("/files/" + directory);
                 String fileName = FileUploadUtil.uploadFile(file, realPath);
-                modelAndView.addObject("a", "/files/" + fileName);
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        modelAndView.setViewName("1/index");
-        return modelAndView;
     }
 
 }
