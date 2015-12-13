@@ -102,7 +102,7 @@
       var img = '<p class="img" style="height:'+this.opts.picHeight+'px"><img src="'+url+'"/></p>';
       var title = '<p class="title">'+name+'</p>';
       var progress = '<p class="progress"><span></span></p>';
-      var tool = '<div class="tool"><a data-role="delete">&#xf013f;</a><a data-role="rotateRight">&#xf013b;</a><a data-role="rotateLeft">&#xf013a;</a></div>';
+        var tool = '<div class="tool"><a data-role="delete">×</a><a data-role="rotateRight">→</a><a data-role="rotateLeft">←</a></div>';
       var result = '<span class="result"></span>';
       var li = doc.createElement('li');
       li.innerHTML = img+title+progress+tool+result;
@@ -171,7 +171,7 @@
       } else {
         var result = X.query('.result', this.fillList[this.index])[0];
         result.style.display = 'inline-block';
-        result.innerHTML = '&#xf00b2;';
+        result.innerHTML = 'OK';
         if(this.index === this.files.length - 1) {
           this.opts.allCompleteCallback && this.opts.allCompleteCallback(e);
           this.progress.style.display = 'none';
